@@ -99,13 +99,13 @@ void loop() {
   {
     //Serial.print(currentTimeSlot);
     //Serial.println("FOG - ON");
-    digitalWrite(RELAY, HIGH);
+    digitalWrite(RELAY, LOW);
   }  
   else
   {
     //Serial.print(currentTimeSlot);
     //Serial.println("FOG - OFF");
-    digitalWrite(RELAY, LOW);    
+    digitalWrite(RELAY, HIGH);    
   }
   delay(TICK_DURATION);
 }
