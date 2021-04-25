@@ -1,8 +1,3 @@
-#include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
- 
-//needed for library
-#include <ESP8266WebServer.h>
-#include <DNSServer.h>
 #include <WiFiManager.h>          //https://github.com/kentaylor/WiFiManager
 
 #include <Artnet.h>
@@ -18,17 +13,17 @@ int currentTimeSlot = 1;
 
 #define FOG_DMX_ADDRESS 1
 
-//SONOFF defines
-#define BUTTON 0
-#define RELAY 12
-#define LED 13 
+
+#define RELAY D1
+#define LED   D3
+
 
 bool ledValue = LOW;
 
  
 void setup() {
   //todo : use button to trigger fog manually 
-  pinMode(BUTTON, INPUT);
+ // pinMode(BUTTON, INPUT);
   pinMode(RELAY, OUTPUT);
   pinMode(LED, OUTPUT);
 
