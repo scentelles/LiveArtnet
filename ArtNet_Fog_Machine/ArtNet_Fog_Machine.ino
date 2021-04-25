@@ -28,7 +28,7 @@ void setup() {
   pinMode(LED, OUTPUT);
 
   //force turn Off
-  digitalWrite(RELAY, LOW);
+  digitalWrite(RELAY, HIGH);
   //force LED ON
   digitalWrite(LED, LOW);
  
