@@ -9,7 +9,7 @@ int tickCount = 0;
 int frameNb = 0;
 int currentTimeSlot = 1;
 #define TICK_DURATION 10
-#define TIME_SLOT_DURATION 50 //*10 = 500ms
+#define TIME_SLOT_DURATION 25 //*10 = 250ms
 
 #define FOG_DMX_ADDRESS 1
 
@@ -94,7 +94,8 @@ void loop() {
   {
     currentTimeSlot = 1;
   }
-  
+
+  //turn on for a duration inside a minute cycle
   if(currentTimeSlot <= currentPumpValue)
   {
     //Serial.print(currentTimeSlot);
